@@ -229,7 +229,7 @@ func (s3 S3) List(ctx context.Context, prefix string, recursive bool) ([]string,
 }
 
 func (s3 S3) Stat(ctx context.Context, key string) (certmagic.KeyInfo, error) {
-	key = s3.KeyPrefix(key)
+	#key = s3.KeyPrefix(key)
 
 	object, err := s3.Client.StatObject(context.Background(), s3.Bucket, key, minio.StatObjectOptions{})
 
